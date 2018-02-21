@@ -1,0 +1,29 @@
+
+List<Employee> emplist=new ArrayList<>();
+connection con=DriverManager.getConnection(url,user,password);
+statement stmt=con.createStatement();
+string query="select * from employee";
+ResultSet rs=stmt.executeQuery(query);
+while(rs.next()){
+int id=rs.getInt("ID");
+String firstname =rs.getString("firstname");
+String lastname =rs.getString("lastname ");
+Date birthdate=rs.getDate("BirthDate");
+BigDecimal salary=rs.getBigDecimal("salary");
+empList.add(new Employee(id,firstname,lastname,birthdate,salary);
+}
+}
+
+
+DAO:
+
+servlet:
+
+processRequest(){
+
+List<Product> product=null;
+
+product=productDAO.getAllProducts();
+response.setContentType("text/html");
+
+}
